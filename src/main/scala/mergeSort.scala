@@ -21,8 +21,3 @@ object MergeSort extends App {
     }
   }
 }
-
-
-MergeSort.mergeSort(Vector())
-MergeSort.mergeSort(Vector(1))
-MergeSort.mergeSort(Vector(3, 2, 4, 1))
