@@ -14,5 +14,11 @@ def main(): Unit = {
   println(TopNSort.topN(Vector(), 123))
   println(TopNSort.topN(Vector(5, 4, 3, 2, 1), 1))
   println("")
+
+  println("Unique merge sort")
+  println(UniqueMergeSort.mergeSort(Vector()))
+  println(UniqueMergeSort.mergeSort(Vector(1, 1, 41, 21)))
+  println(UniqueMergeSort.mergeSort(Vector(3, 2, 4, 1)))
+  println("")
 }
 
