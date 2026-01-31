@@ -2,23 +2,28 @@
 @main
 def main(): Unit = {
 
-  println("Merge sort")
-  println(MergeSort.mergeSort(Vector()))
-  println(MergeSort.mergeSort(Vector(1)))
-  println(MergeSort.mergeSort(Vector(3, 2, 4, 1)))
-  println("")
+  println("Задание 1")
+  object MySum {
+    def MySum(a: List[Int]): Int = {
+      a.foldLeft(0)((acc, x) => acc + x)
+    }
+  }
+  println(MySum.MySum(List(1, 2, 3, 4))) // –> 10
+  println(MySum.MySum(List(-2, 5, 0))) // –> 3
 
-  println("Top n sort")
-  println(TopNSort.topN(Vector(5, 1, 3, 2, 1, 4), 3))
-  println(TopNSort.topN(Vector(10, 20, 30), 3))
-  println(TopNSort.topN(Vector(), 123))
-  println(TopNSort.topN(Vector(5, 4, 3, 2, 1), 1))
-  println("")
+  println("Задание 2")
+  object MyRange {
+    def MyRange(n: Int, m: Int): List[Int] = {
+      n match {
+        case n if n > m => Nil
+        case n if n == m => List(n)
+        case n => n :: MyRange(n + 1, m)
+      }
+    }
+  }
 
-  println("Unique merge sort")
-  println(UniqueMergeSort.mergeSort(Vector()))
-  println(UniqueMergeSort.mergeSort(Vector(1, 1, 41, 21)))
-  println(UniqueMergeSort.mergeSort(Vector(3, 2, 4, 1)))
-  println("")
+  println(MyRange.MyRange(1, 5)) // –> List(1, 2, 3, 4, 5)
+  println(MyRange.MyRange(3, 3)) // –> List (3)
+  println(MyRange.MyRange(5, 1)) // –> Nil
 }
 
