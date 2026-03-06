@@ -6,3 +6,5 @@ lazy val root = (project in file("."))
   .settings(
     name := "hse_scala"
   )
+
+libraryDependencies += "com.typesafe.play" %% "play-json" % "2.10.0-RC7"
